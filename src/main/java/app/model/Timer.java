@@ -1,6 +1,16 @@
 package app.model;
 
-public class Timer {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Timer extends Animal {
+
+    @Override
+    public String toString() {
+        return "Timer{" +
+                "nanoTime=" + nanoTime +
+                '}';
+    }
 
     private Long nanoTime = System.nanoTime();
 
